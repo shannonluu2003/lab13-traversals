@@ -154,6 +154,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
 		if (node.rightChild != null) {
 			inOrderRecurse(node.rightChild);
 		}
+		System.out.println();
 		return;
 	}
 	//Traverse the tree in an inorder fashion but using a stack
