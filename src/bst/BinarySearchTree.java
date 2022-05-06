@@ -159,7 +159,16 @@ public class BinarySearchTree<T extends Comparable<T>> {
 	}
 	
 	public void postOrderRecurse(BSTNode<T> node) {
-		
+		if(node.leftChild == null && node.rightChild == null) {
+			System.out.println(node.data);
+		} else {
+			if(node.leftChild != null) {
+				postOrderRecurse(node.leftChild);
+			}
+			postOrderRecurse(node.rightChild);
+			System.out.println(node.data);
+		}
+		return;
 	}
 	
 	//Traverse the tree in an postorder fashion uses Stacks. 
